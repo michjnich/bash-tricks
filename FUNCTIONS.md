@@ -16,7 +16,7 @@ function pt() {
 function pscan() {
    s="[${1::1}]${1:1}"
    while ps auxw | grep "$s"; do
-      sleep 30;
+      sleep 30
    done | stdbuf -o0 uniq | awk '{ print strftime("[%Y-%m-%d %H:%M:%S]"), $0 }'
 }
 ```
