@@ -1,6 +1,6 @@
 # Useful functions
 
-# To display a process tree
+#### To display a process tree
 Usage : pt <partial process name>
 ```
 function pt() {
@@ -10,8 +10,7 @@ function pt() {
    done
 }
 ```
-
-# To repeatedly scan for a process every 30 secs & output with timestamp
+#### To repeatedly scan for a process every 30 secs & output with timestamp
 ```
 function pscan() {
    s="[${1::1}]${1:1}"
