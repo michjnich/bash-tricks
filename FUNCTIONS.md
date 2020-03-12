@@ -1,7 +1,7 @@
 # Useful functions
 
 #### To display a process tree
-Usage : pt <partial process name>
+Usage : `pt <partial process name>`
 ```
 function pt() {
    pids="$(ps -ef|grep "$1"|grep -v grep|sed -e "s/^[[:space:]]*//"|cut -f2 -d" ")"
@@ -11,6 +11,7 @@ function pt() {
 }
 ```
 #### To repeatedly scan for a process every 30 secs & output with timestamp
+Usage : `pscan <partial process name>`
 ```
 function pscan() {
    s="[${1::1}]${1:1}"
