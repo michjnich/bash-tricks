@@ -20,7 +20,7 @@ function pscan() {
    done | stdbuf -o0 uniq | awk '{ print strftime("[%Y-%m-%d %H:%M:%S]"), $0 }'
 }
 ```
-### To repeatedly scan the matching process every 30 secs for an ongoing status
+#### To repeatedly scan the matching process every 30 secs for an ongoing status
 Usage : `pscano <partial process name>`
 ```
 function pscano() {
