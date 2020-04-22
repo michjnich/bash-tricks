@@ -30,3 +30,13 @@ function pscano() {
    done | stdbuf -o0 awk '{ print strftime("[%Y-%m-%d %H:%M:%S]"), $0 }'
 }
 ```
+#### To run a command with x seconds interval and previx the output with a timestamp
+Usage : `ftime <interval> <cmd>`
+```
+function ftime() {
+   while (( 1==1 )); do
+      eval "${@:2}" | sed "s/^/\[`date +"%Y-%m-%d %H:%M:%S"`]/"
+      sleep $1
+   done
+}
+```
